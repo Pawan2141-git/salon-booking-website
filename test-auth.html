@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Login - Hair Cutting Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1E3A8A, #B87333);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .test-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .test-btn {
+            background: #1E3A8A;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .test-btn:hover {
+            background: #B87333;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h2>Login Page Test</h2>
+        <p>Click below to test login page:</p>
+        <button class="test-btn" onclick="window.location.href='auth.html'">Open Login Page</button>
+        <button class="test-btn" onclick="window.location.href='index.html'">Back to Home</button>
+        
+        <div style="margin-top: 20px; font-size: 14px; color: #666;">
+            <p><strong>Demo Credentials:</strong></p>
+            <p>Customer: john@example.com / password123</p>
+            <p>Admin: admin@haircuttinghub.com / admin123</p>
+        </div>
+    </div>
+</body>
+</html>

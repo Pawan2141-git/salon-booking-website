@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hair Cutting Hub</title>
+    <link rel="stylesheet" href="" id="theme-css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Load selected theme
+        const selectedTheme = localStorage.getItem('selectedTheme');
+        if (selectedTheme && selectedTheme !== 'default') {
+            document.getElementById('theme-css').href = `themes/${selectedTheme}-theme.css`;
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color, #1E3A8A) 0%, var(--accent-color, #B87333) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo i {
+            font-size: 3rem;
+            color: var(--accent-color, #B87333);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color, #1E3A8A), var(--accent-color, #B87333));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-color, #B87333);
+            font-size: 1.1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-color, #B87333);
+            background: white;
+            box-shadow: 0 0 0 3px var(--accent-shadow, rgba(184, 115, 51, 0.1));
+            transform: translateY(-2px);
+        }
+
+        .login-type {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #374151;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            background: var(--accent-shadow, rgba(184, 115, 51, 0.1));
+        }
+
+        .radio-option input {
+            display: none;
+        }
+
+        .radio-checkmark {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 50%;
+            margin-right: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option input:checked + .radio-checkmark {
+            border-color: var(--accent-color, #B87333);
+            background: var(--accent-color, #B87333);
+        }
+
+        .radio-option input:checked + .radio-checkmark::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color, #1E3A8A), var(--accent-color, #B87333));
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow, rgba(184, 115, 51, 0.4));
+        }
+
+        .back-link {
+            text-align: center;
+        }
+
+        .back-link a {
+            color: var(--accent-color, #B87333);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .demo-creds {
+            background: var(--accent-shadow, rgba(184, 115, 51, 0.1));
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .demo-creds strong {
+            color: var(--primary-color, #1E3A8A);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <i class="fas fa-cut"></i>
+            <h1>Hair Cutting Hub</h1>
+            <p>Welcome Back</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email Address" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" id="password" required>
+            </div>
+
+            <div class="login-type">
+                <label class="radio-option">
+                    <input type="radio" name="loginType" value="customer" checked>
+                    <span class="radio-checkmark"></span>
+                    Customer
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="loginType" value="admin">
+                    <span class="radio-checkmark"></span>
+                    Admin
+                </label>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Sign In
+            </button>
+        </form>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Website</a>
+        </div>
+
+        <div class="demo-creds">
+            <strong>Login Info:</strong><br>
+            Use any real email address<br>
+            Admin: Use any email with "admin" in it
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const loginType = document.querySelector('input[name="loginType"]:checked').value;
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address!');
+                return;
+            }
+            
+            // Check password length
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long!');
+                return;
+            }
+            
+            // Determine user type
+            let userType = 'customer';
+            if (loginType === 'admin' || email.toLowerCase().includes('admin')) {
+                userType = 'admin';
+            }
+            
+            // Store login
+            localStorage.setItem('userLoggedIn', 'true');
+            localStorage.setItem('currentUser', JSON.stringify({ email, type: userType }));
+            
+            // Redirect
+            if (userType === 'admin') {
+                alert('Admin login successful! Redirecting...');
+                window.location.href = 'admin.html';
+            } else {
+                alert('Login successful! Welcome back!');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

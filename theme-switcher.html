@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Themes - Hair Cutting Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFD700, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .theme-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-preview {
+            height: 200px;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .color-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .theme-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .apply-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #FF6B35, #FFD700);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Theme Previews */
+        .navy-copper {
+            background: linear-gradient(135deg, #1E3A8A, #B87333);
+        }
+
+        .maroon-gold {
+            background: linear-gradient(135deg, #800020, #FFD700);
+        }
+
+        .navy-copper-white {
+            background: linear-gradient(135deg, #1E3A8A, #B87333, #FFFFFF);
+        }
+
+        .charcoal-teal {
+            background: linear-gradient(135deg, #36454F, #14B8A6);
+        }
+
+        .emerald-black {
+            background: linear-gradient(135deg, #50C878, #000000);
+        }
+
+        .black-rose-gold {
+            background: linear-gradient(135deg, #000000, #E8B4B8);
+        }
+
+        .purple-gold {
+            background: linear-gradient(135deg, #663399, #FFD700);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Website
+    </a>
+
+    <div class="container">
+        <div class="header">
+            <h1>Premium Color Themes</h1>
+            <p>Choose your perfect barber shop aesthetic</p>
+        </div>
+
+        <div class="themes-grid">
+            <!-- Navy Blue + Copper + White -->
+            <div class="theme-card" onclick="applyTheme('navy-copper')">
+                <div class="theme-preview navy-copper-white"></div>
+                <h3 class="theme-name">Navy Blue + Copper + White</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #1E3A8A;"></div>
+                    <div class="color-dot" style="background: #B87333;"></div>
+                    <div class="color-dot" style="background: #FFFFFF;"></div>
+                </div>
+                <p class="theme-description">Trendy, professional, and not too common. Gives a bold, confident identity perfect for modern barbershops.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Deep Maroon + Gold + Cream -->
+            <div class="theme-card" onclick="applyTheme('maroon-gold')">
+                <div class="theme-preview maroon-gold"></div>
+                <h3 class="theme-name">Deep Maroon + Gold + Cream</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #800020;"></div>
+                    <div class="color-dot" style="background: #FFD700;"></div>
+                    <div class="color-dot" style="background: #F5F5DC;"></div>
+                </div>
+                <p class="theme-description">Classic vintage barbershop look. Rich & premium feel, especially for salon interiors with traditional charm.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Charcoal Gray + Teal + White -->
+            <div class="theme-card" onclick="applyTheme('charcoal-teal')">
+                <div class="theme-preview charcoal-teal"></div>
+                <h3 class="theme-name">Charcoal Gray + Teal + White</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #36454F;"></div>
+                    <div class="color-dot" style="background: #14B8A6;"></div>
+                    <div class="color-dot" style="background: #FFFFFF;"></div>
+                </div>
+                <p class="theme-description">Sleek and modern. Minimalist but stylish approach that appeals to contemporary clients.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Black + Royal Blue + Silver -->
+            <div class="theme-card" onclick="applyTheme('black-blue')">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #000000, #4169E1, #C0C0C0);"></div>
+                <h3 class="theme-name">Black + Royal Blue + Silver</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #000000;"></div>
+                    <div class="color-dot" style="background: #4169E1;"></div>
+                    <div class="color-dot" style="background: #C0C0C0;"></div>
+                </div>
+                <p class="theme-description">Luxury feel but more modern than gold. Works well with neon/glow effects for premium appeal.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Emerald Green + Black + Golden Yellow -->
+            <div class="theme-card" onclick="applyTheme('emerald-black')">
+                <div class="theme-preview emerald-black"></div>
+                <h3 class="theme-name">Emerald Green + Black + Golden Yellow</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #50C878;"></div>
+                    <div class="color-dot" style="background: #000000;"></div>
+                    <div class="color-dot" style="background: #FFD700;"></div>
+                </div>
+                <p class="theme-description">Unique & refreshing. Gives premium + nature-inspired luxury vibe that stands out from competition.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Matte Black + Rose Gold + Ivory -->
+            <div class="theme-card" onclick="applyTheme('black-rose-gold')">
+                <div class="theme-preview black-rose-gold"></div>
+                <h3 class="theme-name">Matte Black + Rose Gold + Ivory</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #000000;"></div>
+                    <div class="color-dot" style="background: #E8B4B8;"></div>
+                    <div class="color-dot" style="background: #FFFFF0;"></div>
+                </div>
+                <p class="theme-description">Ultra-luxury & modern salon feel. Perfect for high-end clientele seeking sophisticated elegance.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+
+            <!-- Dark Purple + Gold + White -->
+            <div class="theme-card" onclick="applyTheme('purple-gold')">
+                <div class="theme-preview purple-gold"></div>
+                <h3 class="theme-name">Dark Purple + Gold + White</h3>
+                <div class="color-palette">
+                    <div class="color-dot" style="background: #663399;"></div>
+                    <div class="color-dot" style="background: #FFD700;"></div>
+                    <div class="color-dot" style="background: #FFFFFF;"></div>
+                </div>
+                <p class="theme-description">Royal & majestic. Instantly grabs attention with regal sophistication and memorable brand presence.</p>
+                <button class="apply-btn">Apply Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function applyTheme(themeName) {
+            // Store selected theme
+            localStorage.setItem('selectedTheme', themeName);
+            
+            // Show confirmation
+            alert(`${themeName.replace('-', ' ').toUpperCase()} theme will be applied! Redirecting to website...`);
+            
+            // Redirect to main website
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

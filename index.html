@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Cutting Hub - Premium Barber Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="" id="theme-css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Load selected theme
+        const selectedTheme = localStorage.getItem('selectedTheme');
+        if (selectedTheme && selectedTheme !== 'default') {
+            document.getElementById('theme-css').href = `themes/${selectedTheme}-theme.css`;
+        }
+    </script>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/1234567890" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Advanced Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Hair Cutting Hub</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="barbers.html" class="nav-link">Barbers</a></li>
+                <li><a href="booking.html" class="nav-link">Booking</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="theme-selector.html" class="nav-link theme-btn"><i class="fas fa-palette"></i> Themes</a></li>
+                <li><a href="login.html" class="nav-link login-link">Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Your Style,</span>
+                    <span class="gradient-text">Our Skill</span>
+                </h1>
+                <p class="hero-subtitle">Premium grooming experience with master barbers</p>
+                <div class="hero-cta">
+                    <a href="booking.html" class="glow-button">
+                        <span>Book Appointment</span>
+                        <i class="fas fa-calendar-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Welcome to Hair Cutting Hub</h2>
+                        <p class="about-description">Where tradition meets innovation. For over 15 years, we've been crafting exceptional grooming experiences that go beyond just a haircut. Our master barbers combine time-honored techniques with modern styling to create looks that reflect your unique personality.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <span>Award-Winning Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-scissors"></i>
+                                <span>Master Craftsmen</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <span>Premium Experience</span>
+                            </div>
+                        </div>
+                        <div class="about-cta">
+                            <a href="services.html" class="btn-primary">Explore Services</a>
+                            <a href="barbers.html" class="btn-secondary">Meet Our Team</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&h=600&fit=crop" alt="Professional Barber" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The Hair Cutting Hub Experience</h2>
+                    <p class="section-subtitle">Discover what makes us the premier destination for men's grooming</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Expert Craftsmanship</h3>
+                        <p>Our master barbers bring decades of experience and artistic vision to every cut, ensuring precision and style in every service.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Luxury Atmosphere</h3>
+                        <p>Relax in our premium environment designed for comfort, featuring leather chairs, ambient lighting, and a sophisticated ambiance.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Convenient Booking</h3>
+                        <p>Schedule your appointment online with our easy booking system. Choose your preferred barber, service, and time slot.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Premium Products</h3>
+                        <p>We use only the finest grooming products and tools, ensuring your hair and skin receive the best care possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" data-target="5000">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <h2>Ready for Your Best Look Yet?</h2>
+                    <p>Join thousands of satisfied clients who trust Hair Cutting Hub for their grooming needs. Book your appointment today and experience the difference.</p>
+                    <div class="cta-buttons">
+                        <a href="booking.html" class="glow-button">
+                            <span>Book Now</span>
+                            <i class="fas fa-calendar-alt"></i>
+                        </a>
+                        <a href="gallery.html" class="btn-outline">
+                            <span>View Gallery</span>
+                            <i class="fas fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Barber Team Section -->
+        <section class="barbers" id="barbers">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet Our Expert Barbers</h2>
+                    <p class="section-subtitle">Skilled professionals dedicated to your style</p>
+                </div>
+                <div class="barbers-grid">
+                    <div class="barber-card glass-card">
+                        <div class="barber-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="barber-info">
+                            <h3>Mike Johnson</h3>
+                            <p class="barber-role">Master Barber</p>
+                            <p class="barber-experience">15+ Years Experience</p>
+                            <div class="barber-specialties">
+                                <span>Fades</span>
+                                <span>Beard Styling</span>
+                            </div>
+                            <div class="barber-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barber-card glass-card">
+                        <div class="barber-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="barber-info">
+                            <h3>David Rodriguez</h3>
+                            <p class="barber-role">Senior Barber</p>
+                            <p class="barber-experience">10+ Years Experience</p>
+                            <div class="barber-specialties">
+                                <span>Classic Cuts</span>
+                                <span>Hot Shaves</span>
+                            </div>
+                            <div class="barber-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barber-card glass-card">
+                        <div class="barber-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="barber-info">
+                            <h3>Alex Thompson</h3>
+                            <p class="barber-role">Style Specialist</p>
+                            <p class="barber-experience">8+ Years Experience</p>
+                            <div class="barber-specialties">
+                                <span>Modern Styles</span>
+                                <span>Color</span>
+                            </div>
+                            <div class="barber-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking" id="booking">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Book Your Appointment</h2>
+                    <p class="section-subtitle">Easy 5-step booking process</p>
+                </div>
+                <div class="booking-wizard glass-card">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="step active" data-step="1">1</div>
+                        <div class="step" data-step="2">2</div>
+                        <div class="step" data-step="3">3</div>
+                        <div class="step" data-step="4">4</div>
+                        <div class="step" data-step="5">5</div>
+                    </div>
+                    <div class="booking-content">
+                        <div class="booking-step active" id="step-1">
+                            <h3>Select Service</h3>
+                            <div class="service-options">
+                                <div class="service-option" data-service="Classic Haircut" data-price="25">
+                                    <i class="fas fa-cut"></i>
+                                    <span>Classic Haircut - $25</span>
+                                </div>
+                                <div class="service-option" data-service="Fade Cut" data-price="30">
+                                    <i class="fas fa-magic"></i>
+                                    <span>Fade Cut - $30</span>
+                                </div>
+                                <div class="service-option" data-service="Beard Trim" data-price="20">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Beard Trim - $20</span>
+                                </div>
+                                <div class="service-option" data-service="Premium Package" data-price="60">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Premium Package - $60</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-step" id="step-2">
+                            <h3>Choose Barber</h3>
+                            <div class="barber-options">
+                                <div class="barber-option" data-barber="Mike Johnson">
+                                    <div class="barber-avatar"><i class="fas fa-user"></i></div>
+                                    <span>Mike Johnson</span>
+                                </div>
+                                <div class="barber-option" data-barber="David Rodriguez">
+                                    <div class="barber-avatar"><i class="fas fa-user"></i></div>
+                                    <span>David Rodriguez</span>
+                                </div>
+                                <div class="barber-option" data-barber="Alex Thompson">
+                                    <div class="barber-avatar"><i class="fas fa-user"></i></div>
+                                    <span>Alex Thompson</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-step" id="step-3">
+                            <h3>Pick Date & Time</h3>
+                            <div class="datetime-picker">
+                                <input type="date" id="booking-date" class="glass-input">
+                                <div class="time-slots">
+                                    <div class="time-slot" data-time="09:00">9:00 AM</div>
+                                    <div class="time-slot" data-time="10:00">10:00 AM</div>
+                                    <div class="time-slot" data-time="11:00">11:00 AM</div>
+                                    <div class="time-slot" data-time="14:00">2:00 PM</div>
+                                    <div class="time-slot" data-time="15:00">3:00 PM</div>
+                                    <div class="time-slot" data-time="16:00">4:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-step" id="step-4">
+                            <h3>Your Details</h3>
+                            <div class="booking-form">
+                                <input type="text" placeholder="Full Name" class="glass-input" id="customer-name">
+                                <input type="tel" placeholder="Phone Number" class="glass-input" id="customer-phone">
+                                <input type="email" placeholder="Email Address" class="glass-input" id="customer-email">
+                                <textarea placeholder="Special requests (optional)" class="glass-input" id="customer-notes"></textarea>
+                            </div>
+                        </div>
+                        <div class="booking-step" id="step-5">
+                            <h3>Confirm Booking</h3>
+                            <div class="booking-summary">
+                                <div class="summary-item">
+                                    <span>Service:</span>
+                                    <span id="summary-service">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Barber:</span>
+                                    <span id="summary-barber">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Date & Time:</span>
+                                    <span id="summary-datetime">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Total:</span>
+                                    <span id="summary-total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-navigation">
+                        <button class="btn-secondary" id="prev-step" style="display: none;">Previous</button>
+                        <button class="btn-primary" id="next-step">Next</button>
+                        <button class="btn-primary" id="confirm-booking" style="display: none;">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card glass-card active">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Amazing service! Mike gave me the best haircut I've ever had. The attention to detail is incredible."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>John Smith</h4>
+                                    <span>Regular Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Professional service and great atmosphere. David's beard trimming skills are unmatched!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Michael Brown</h4>
+                                    <span>Business Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Love the modern vibe and Alex's creative styling. Always leave feeling confident!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <span>Marketing Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Work Gallery</h2>
+                    <p class="section-subtitle">See our latest cuts and styles</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop" alt="Classic Haircut" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=300&fit=crop" alt="Fade Cut" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&h=300&fit=crop" alt="Beard Trim" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&h=300&fit=crop" alt="Hot Towel Shave" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1622286346003-c8b4473f4c0c?w=400&h=300&fit=crop" alt="Premium Package" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=400&h=300&fit=crop" alt="Hair Styling" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Visit us or get in touch</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Location</h3>
+                            <p>123 Main Street<br>Downtown, City 12345</p>
+                        </div>
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                        </div>
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Hours</h3>
+                            <p>Mon-Fri: 9AM-7PM<br>Sat: 9AM-6PM<br>Sun: 10AM-5PM</p>
+                        </div>
+                        <div class="contact-form glass-card">
+                            <h3>Send Message</h3>
+                            <form>
+                                <input type="text" placeholder="Your Name" class="glass-input">
+                                <input type="email" placeholder="Your Email" class="glass-input">
+                                <textarea placeholder="Your Message" class="glass-input"></textarea>
+                                <button type="submit" class="btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-gradient"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-cut"></i>
+                        <span>Hair Cutting Hub</span>
+                    </div>
+                    <p>Premium grooming experience with master barbers</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#barbers">Barbers</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Haircuts</a></li>
+                        <li><a href="#">Beard Styling</a></li>
+                        <li><a href="#">Hot Shaves</a></li>
+                        <li><a href="#">Hair Washing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street</li>
+                        <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
+                        <li><i class="fas fa-envelope"></i> info@haircuttinghub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hair Cutting Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content glass-card">
+            <div class="success-animation">
+                <div class="checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h3>Booking Confirmed!</h3>
+            <p>Your appointment has been successfully booked.</p>
+            <p><strong>Booking ID:</strong> <span id="booking-id"></span></p>
+            <button class="btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

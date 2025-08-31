@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Hair Cutting Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="" id="theme-css">
+    <script>
+        const selectedTheme = localStorage.getItem('selectedTheme');
+        if (selectedTheme && selectedTheme !== 'default') {
+            document.getElementById('theme-css').href = `themes/${selectedTheme}-theme.css`;
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Hair Cutting Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="barbers.html" class="nav-link">Barbers</a></li>
+                <li><a href="booking.html" class="nav-link">Booking</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="theme-selector.html" class="nav-link theme-btn"><i class="fas fa-palette"></i> Themes</a></li>
+                <li><a href="login.html" class="nav-link login-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Work Gallery</h2>
+                    <p class="section-subtitle">See our latest cuts and styles</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop" alt="Classic Haircut" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=300&fit=crop" alt="Fade Cut" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&h=300&fit=crop" alt="Beard Trim" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&h=300&fit=crop" alt="Hot Towel Shave" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1622286346003-c8b4473f4c0c?w=400&h=300&fit=crop" alt="Premium Package" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=400&h=300&fit=crop" alt="Hair Styling" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Modern Cut" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&h=300&fit=crop" alt="Beard Styling" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Professional Cut" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card glass-card active">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Amazing service! Mike gave me the best haircut I've ever had. The attention to detail is incredible."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>John Smith</h4>
+                                    <span>Regular Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Professional service and great atmosphere. David's beard trimming skills are unmatched!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Michael Brown</h4>
+                                    <span>Business Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Love the modern vibe and Alex's creative styling. Always leave feeling confident!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <span>Marketing Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
