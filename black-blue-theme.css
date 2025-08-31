@@ -1,0 +1,249 @@
+/* Black + Royal Blue + Silver Theme */
+:root {
+    --primary-color: #000000; /* Black */
+    --secondary-color: #4169E1; /* Royal Blue */
+    --accent-color: #C0C0C0; /* Silver */
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --black-gradient: linear-gradient(135deg, #000000, #2C2C2C);
+    --blue-gradient: linear-gradient(135deg, #4169E1, #1E90FF);
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(135deg, #000000 0%, #4169E1 100%) !important;
+}
+
+/* Logo and Branding */
+.logo {
+    background: linear-gradient(135deg, #000000, #4169E1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.logo i {
+    color: #C0C0C0 !important;
+}
+
+/* Buttons and CTAs */
+.glow-button {
+    background: #4169E1 !important;
+    box-shadow: 0 10px 30px rgba(65, 105, 225, 0.4) !important;
+}
+
+.glow-button:hover {
+    box-shadow: 0 15px 40px rgba(65, 105, 225, 0.6) !important;
+}
+
+.btn-primary {
+    background: #4169E1 !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: #1E90FF !important;
+}
+
+/* Service Cards */
+.service-icon {
+    color: #C0C0C0 !important;
+    background: rgba(192, 192, 192, 0.1) !important;
+}
+
+.price {
+    color: #4169E1 !important;
+}
+
+.book-service-btn {
+    background: #4169E1 !important;
+    color: white !important;
+}
+
+.book-service-btn:hover {
+    background: #1E90FF !important;
+}
+
+/* Stats and Icons */
+.stat-icon {
+    color: #C0C0C0 !important;
+}
+
+.stat-number {
+    color: #000000 !important;
+}
+
+/* Barber Cards */
+.barber-image .image-placeholder {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+    box-shadow: 0 10px 30px rgba(65, 105, 225, 0.3) !important;
+}
+
+.barber-role {
+    color: #4169E1 !important;
+}
+
+.barber-specialties span {
+    background: rgba(65, 105, 225, 0.1) !important;
+    color: #4169E1 !important;
+}
+
+.barber-social a:hover {
+    color: #C0C0C0 !important;
+}
+
+/* Footer */
+.footer {
+    background: #000000 !important;
+}
+
+.footer-gradient {
+    background: linear-gradient(90deg, #C0C0C0, #4169E1) !important;
+}
+
+.footer-logo i {
+    color: #C0C0C0 !important;
+}
+
+.footer-section h4 {
+    color: #C0C0C0 !important;
+}
+
+.footer-section ul li a:hover {
+    color: #C0C0C0 !important;
+}
+
+.social-links a:hover {
+    background: #4169E1 !important;
+}
+
+/* Booking System */
+.progress-fill {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+}
+
+.step.active {
+    background: #4169E1 !important;
+    color: white !important;
+}
+
+.step.completed {
+    background: #000000 !important;
+}
+
+.service-option:hover,
+.barber-option:hover,
+.service-option.selected,
+.barber-option.selected {
+    border-color: #4169E1 !important;
+    background: rgba(65, 105, 225, 0.1) !important;
+}
+
+.service-option i {
+    color: #4169E1 !important;
+}
+
+.barber-avatar {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+}
+
+.glass-input:focus {
+    border-color: #4169E1 !important;
+    box-shadow: 0 8px 25px rgba(65, 105, 225, 0.2) !important;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+    border-color: #4169E1 !important;
+    background: rgba(65, 105, 225, 0.1) !important;
+    color: #000000 !important;
+}
+
+/* Navigation */
+.nav-link:hover,
+.nav-link.active {
+    color: #000000 !important;
+    background: rgba(65, 105, 225, 0.1) !important;
+}
+
+.nav-link::after {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+}
+
+.login-link {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+    color: white !important;
+}
+
+.login-link:hover {
+    background: linear-gradient(135deg, #1E90FF, #2C2C2C) !important;
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.4) !important;
+}
+
+/* Section Titles */
+.section-title {
+    color: #000000 !important;
+}
+
+.service-card h3 {
+    color: #000000 !important;
+}
+
+.barber-info h3 {
+    color: #000000 !important;
+}
+
+.booking-step h3 {
+    color: #000000 !important;
+}
+
+/* Feature Cards */
+.feature-icon {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+}
+
+.feature-card h3 {
+    color: #000000 !important;
+}
+
+/* About Section */
+.feature-item {
+    color: #000000 !important;
+}
+
+.feature-item i {
+    color: #4169E1 !important;
+}
+
+/* CTA Section */
+.cta-content h2 {
+    color: #000000 !important;
+}
+
+.btn-outline {
+    border-color: #4169E1 !important;
+    color: #000000 !important;
+}
+
+.btn-outline:hover {
+    background: #4169E1 !important;
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(135deg, #000000, #4169E1) !important;
+}
+
+/* Theme Button */
+.theme-btn {
+    background: linear-gradient(135deg, #4169E1, #000000) !important;
+}
+
+.theme-btn:hover {
+    background: linear-gradient(135deg, #1E90FF, #2C2C2C) !important;
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.4) !important;
+}

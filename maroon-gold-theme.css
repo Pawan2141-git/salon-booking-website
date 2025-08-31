@@ -1,0 +1,196 @@
+/* Deep Maroon + Gold + Cream Theme */
+:root {
+    --primary-color: #800020; /* Deep Maroon */
+    --secondary-color: #FFD700; /* Gold */
+    --accent-color: #F5F5DC; /* Cream */
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --bg-light: #FDF6E3;
+    --white: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --maroon-gradient: linear-gradient(135deg, #800020, #A0002A);
+    --gold-gradient: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(135deg, #800020 0%, #FFD700 100%) !important;
+}
+
+/* Logo and Branding */
+.logo {
+    background: linear-gradient(135deg, #800020, #FFD700) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.logo i {
+    color: #FFD700 !important;
+}
+
+/* Buttons and CTAs */
+.glow-button {
+    background: #FFD700 !important;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4) !important;
+}
+
+.glow-button:hover {
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6) !important;
+}
+
+.btn-primary {
+    background: #FFD700 !important;
+    color: #800020 !important;
+    font-weight: 700 !important;
+}
+
+.btn-primary:hover {
+    background: #FFA500 !important;
+}
+
+/* Service Cards */
+.service-icon {
+    color: #FFD700 !important;
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+.price {
+    color: #FFD700 !important;
+}
+
+.book-service-btn {
+    background: #FFD700 !important;
+    color: #800020 !important;
+    font-weight: 700 !important;
+}
+
+.book-service-btn:hover {
+    background: #FFA500 !important;
+}
+
+/* Stats and Icons */
+.stat-icon {
+    color: #FFD700 !important;
+}
+
+.stat-number {
+    color: #800020 !important;
+}
+
+/* Barber Cards */
+.barber-image .image-placeholder {
+    background: linear-gradient(135deg, #FFD700, #800020) !important;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3) !important;
+}
+
+.barber-role {
+    color: #FFD700 !important;
+}
+
+.barber-specialties span {
+    background: rgba(255, 215, 0, 0.1) !important;
+    color: #FFD700 !important;
+}
+
+.barber-social a:hover {
+    color: #FFD700 !important;
+}
+
+/* Footer */
+.footer-gradient {
+    background: linear-gradient(90deg, #FFD700, #800020) !important;
+}
+
+.footer-logo i {
+    color: #FFD700 !important;
+}
+
+.footer-section h4 {
+    color: #FFD700 !important;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700 !important;
+}
+
+.social-links a:hover {
+    background: #FFD700 !important;
+}
+
+/* Booking System */
+.progress-fill {
+    background: linear-gradient(135deg, #FFD700, #800020) !important;
+}
+
+.step.active {
+    background: #FFD700 !important;
+    color: #800020 !important;
+}
+
+.step.completed {
+    background: #800020 !important;
+}
+
+.service-option:hover,
+.barber-option:hover,
+.service-option.selected,
+.barber-option.selected {
+    border-color: #FFD700 !important;
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+.service-option i {
+    color: #FFD700 !important;
+}
+
+.barber-avatar {
+    background: linear-gradient(135deg, #FFD700, #800020) !important;
+}
+
+.glass-input:focus {
+    border-color: #FFD700 !important;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2) !important;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+    border-color: #FFD700 !important;
+    background: rgba(255, 215, 0, 0.1) !important;
+    color: #800020 !important;
+}
+
+/* Navigation */
+.nav-link:hover,
+.nav-link.active {
+    color: #800020 !important;
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+.nav-link::after {
+    background: linear-gradient(135deg, #FFD700, #800020) !important;
+}
+
+.login-link {
+    background: linear-gradient(135deg, #FFD700, #800020) !important;
+    color: white !important;
+}
+
+.login-link:hover {
+    background: linear-gradient(135deg, #FFA500, #A0002A) !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #FDF6E3 0%, #F5F5DC 100%) !important;
+}
+
+.services {
+    background: linear-gradient(135deg, #FDF6E3 0%, #F5F5DC 100%) !important;
+}
+
+.barbers {
+    background: linear-gradient(135deg, #FDF6E3 0%, #F5F5DC 100%) !important;
+}
